@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bcryct'
+gem 'bcrypt'
 gem 'pg'
 gem 'rake'
 gem 'sinatra'
@@ -8,7 +8,7 @@ gem 'sinatra-contrib'
 gem 'sinatra-flash'
 gem 'webrick', '~> 1.7'
 
-groub :test do
+group :test do
   gem 'capybara'
   gem 'rspec'
   gem 'rubocop', '0.79.0'

@@ -15,13 +15,14 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 # Don't forget about helpers!
+require_relative '../database_setup.rb'
 
 Capybara.app = Apebnb
 
 RSpec.configure do |config|  
-  # config.before(:each) do
-  #   setup_test_db
-  # end
+  config.before(:each) do
+    setup_test_database
+  end
 
   config.after(:suite) do
     puts

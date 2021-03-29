@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/flash'
 require 'sinatra/reloader'
+require './database_setup'
 
 class Apebnb < Sinatra::Base
   configure :development do
@@ -9,4 +10,8 @@ class Apebnb < Sinatra::Base
 
   enable :method_override, :sessions
   register Sinatra::Flash
+
+  get '/' do
+    erb(:index)
+  end
 end 
