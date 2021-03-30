@@ -7,6 +7,8 @@
           1,
           1,
           1,
+          1,
+          1,
           null,
           1,
           1,
@@ -17,11 +19,22 @@
           1,
           null,
           1,
-          3,
+          10,
           null,
           null,
           1,
+          1,
+          null,
+          null,
+          1,
+          4,
           2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          4,
           null,
           null
         ]
@@ -37,18 +50,18 @@
           null,
           null,
           1,
-          6,
-          6,
-          6,
-          6,
-          6,
-          6,
-          6,
-          6,
-          6,
-          6,
-          6,
-          6,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
+          12,
           null
         ]
       },
@@ -58,7 +71,7 @@
           null,
           1,
           1,
-          10,
+          16,
           null,
           null,
           1,
@@ -66,8 +79,64 @@
           null,
           null,
           1,
-          71,
+          145,
           null,
+          null
+        ]
+      },
+      "/Users/taran/makers/week5/makersbnb/lib/listing.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          9,
+          9,
+          null,
+          null,
+          1,
+          3,
+          12,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/taran/makers/week5/makersbnb/lib/user.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          5,
+          5,
+          null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/taran/makers/week5/makersbnb/spec/web_helpers.rb": {
+        "lines": [
+          1,
+          4,
+          4,
+          4,
+          4,
           null
         ]
       },
@@ -77,8 +146,52 @@
           1,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/taran/makers/week5/makersbnb/spec/features/login_spec.rb": {
+        "lines": [
+          1,
+          null,
           1,
           1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/taran/makers/week5/makersbnb/spec/features/new_listing_spec.rb": {
+        "lines": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           null,
           null
         ]
@@ -148,37 +261,28 @@
           null
         ]
       },
-      "/Users/taran/makers/week5/makersbnb/lib/listing.rb": {
+      "/Users/taran/makers/week5/makersbnb/spec/unit/user_spec.rb": {
         "lines": [
           1,
           null,
           1,
           null,
           1,
-          null,
           1,
-          12,
-          12,
-          null,
-          null,
           1,
-          4,
-          16,
+          null,
           null,
           null,
           1,
-          8,
+          1,
+          1,
+          1,
           null,
           null,
           null
         ]
-      },
-      "/Users/taran/makers/week5/makersbnb/spec/unit/user_spec.rb": {
-        "lines": [
-
-        ]
       }
     },
-    "timestamp": 1617102027
+    "timestamp": 1617114610
   }
 }

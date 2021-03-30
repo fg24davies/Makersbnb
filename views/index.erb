@@ -8,11 +8,26 @@
 </head>
 <body>
   <h1>Welcome to ApeBnB!</h1>
-  <form>
-    <button type="submit" name="Sign-in">Sign-in</button>
-  </form>
+  <h3><%=flash[:invalid_username]%></h3>
+  <h3><%=flash[:invalid_password]%></h3>
+  # if logged in 
+  <% if session[:username] %>
+    <h2> Welcome back <%= session[:username] %> </h2>
+    # add listing
+  <% else %>
+    <form action="/sessions" method="post">
+      <input type="text" name="username" placeholder="username" />
+      <input type="password" name="password" placeholder="password" />
+      <button type="submit" name="Log in">Log in</button>
+    </form>
+  <% end %>
+  
+  # if not logged in 
+  
+
   <form action='/listings' method='get'>
     <button type="submit" name="View Listings">View Listings</button>
   </form>
+
 </body>
 </html>

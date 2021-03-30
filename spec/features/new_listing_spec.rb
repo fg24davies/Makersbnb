@@ -1,5 +1,5 @@
 feature 'User can create a new listing' do
-  scenario 'A user can list their room' do
+  xscenario 'A user can list their room' do
     visit('/')
     click_button("View Listings")
     click_button("Post Listing")
