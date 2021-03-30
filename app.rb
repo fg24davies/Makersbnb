@@ -29,10 +29,10 @@ class Apebnb < Sinatra::Base
 
   get '/user/welcome' do
     erb(:welcome)
+  end
 
   get '/listings' do
     erb(:listings)
-
   end
 
   post '/sessions' do

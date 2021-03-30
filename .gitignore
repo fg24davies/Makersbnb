@@ -3,3 +3,6 @@
 
 # Ignore rubocop cop blocks
 .rubocop.yml
+
+# Ignore coverage
+.coverage
