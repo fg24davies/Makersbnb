@@ -7,11 +7,11 @@
   <title>Sign-Up</title>
 </head>
 <body>
-  <form>
-    <label for="name">Name:</label><input type="text" name="name" id="name">
-    <label for="username">Userame:</label><input type="text" name="username" id="username">
-    <label for="email">E-mail:</label><input type="email" name="email" id="email">
-    <label for="password">Password:</label><input type="password" name="text" id="password">
+  <form action='/user/new' method='post'>
+    <label for="name">Name:</label><input type="text" name="name" id="name" required>
+    <label for="username">Username:</label><input type="text" name="username" id="username" required>
+    <label for="email">E-mail:</label><input type="email" name="email" id="email" required>
+    <label for="password">Password:</label><input type="password" name="text" id="password" required>
     <button type="submit" value="Submit">Submit</button>
   </form>
 </body>

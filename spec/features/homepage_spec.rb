@@ -9,6 +9,6 @@ feature "Visiting Homepage" do
   scenario "user clicks on sign up link" do
     visit '/'
     click_button("Sign-up")
-    expect(current_path).to eql("/sign_up")
+    expect(current_path).to eq "/sign_up" 
   end
 end
