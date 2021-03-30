@@ -14,6 +14,7 @@ require './app.rb'
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require_relative './web_helpers'
 # Don't forget about helpers!
 require_relative '../database_setup.rb'
 

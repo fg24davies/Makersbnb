@@ -8,9 +8,24 @@
 </head>
 <body>
   <h1>Welcome to ApeBnB!</h1>
+  <h3><%=flash[:invalid_username]%></h3>
+  <h3><%=flash[:invalid_password]%></h3>
+  <%# If logged in  %>
+  <% if session[:username] %>
+    <h2> Welcome back <%= session[:username] %> </h2>
+  <%# If not logged in  %>
+  <% else %>
+    <form action="/sessions" method="post">
+      <input type="text" name="username" placeholder="username" />
+      <input type="password" name="password" placeholder="password" />
+      <button type="submit" name="Log in">Log in</button>
+    </form>
+  <% end %>
+
   <form action="/sign_up" method="get">
   <button type="submit" name="Sign-up">Sign-up</button>
   </form>
+
   <form action='/listings' method='get'>
     <button type="submit" name="View Listings">View Listings</button>
   </form>
