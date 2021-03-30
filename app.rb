@@ -3,6 +3,7 @@ require 'sinatra/flash'
 require 'sinatra/reloader'
 require './database_setup'
 require './lib/user'
+require './lib/listing'
 
 class Apebnb < Sinatra::Base
   configure :development do
@@ -27,5 +28,9 @@ class Apebnb < Sinatra::Base
 
   get '/user/welcome' do
     erb(:welcome)
+
+  get '/listings' do
+    erb(:listings)
+
   end
 end 
