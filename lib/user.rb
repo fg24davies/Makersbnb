@@ -1,3 +1,4 @@
+
 require_relative 'database_connection'
 
 class User
@@ -14,4 +15,9 @@ class User
     data = DatabaseConnection.query("SELECT username FROM users WHERE username = '#{username}';")
     data.ntuples.positive?
   end
+
+  def self.add(name:, username:, email:, password:)
+    DatabaseConnection.query("INSERT INTO users (name, username, email, password) VALUES ('#{name}', '#{username}', '#{email}', '#{password}');")
+  end
 end
+
