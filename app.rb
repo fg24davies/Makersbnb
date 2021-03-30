@@ -16,5 +16,6 @@ class Apebnb < Sinatra::Base
   end
 
   get '/sign_up' do
+    erb(:sign_up)
   end
 end 
