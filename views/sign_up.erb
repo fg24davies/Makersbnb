@@ -7,6 +7,8 @@
   <title>Sign-Up</title>
 </head>
 <body>
+  <%= flash[:username_in_use] %>
+  <%= flash[:email_in_use] %>
   <form action='/user/new' method='post'>
     <label for="name">Name:</label><input type="text" name="name" id="name" required>
     <label for="username">Username:</label><input type="text" name="username" id="username" required>

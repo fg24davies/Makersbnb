@@ -1,14 +1,13 @@
-def log_in(username, password)
-  visit('/')
-  click_on("Login")
-  fill_in('username', with: "#{username}")
-  fill_in('password', with: "#{password}")
+def log_in(username:, password:)
+  visit '/'
+  fill_in('username', with: username)
+  fill_in('password', with: password)
   click_button("Log in")
 end
 
-def sign_up(name, username, email, password)
-  visit('/')
-  click_link("Sign Up")
+def sign_up(name:, username:, email:, password:)
+  visit '/'
+  click_button("Sign Up")
   fill_in('name', with: name)
   fill_in('username', with: username)
   fill_in('email', with: email)

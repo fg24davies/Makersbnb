@@ -35,6 +35,7 @@ Our MVP will include the following functionality:
 - [ ] Listing page includes information about listings and to request a booking
 - [ ] Sort out the README
 
+
 User stories
 ------------
 
@@ -59,3 +60,4 @@ As a person with a room to rent
 So others can look at it
 I want to be able to list it
 ```
+
