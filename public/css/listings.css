@@ -125,12 +125,12 @@ h1 {
 */
 
 .button {
-  background: rgb(255, 89, 95);
+  background: rgb(211, 76, 14);
   color: white;
   text-decoration: none;
   display: block;
   padding: 0.75rem 5rem;
-  border-bottom: 1px solid rgb(227, 25, 29);
+  border-bottom: 1px solid rgb(221, 76, 14);
   border-radius: 2px;
   width: 95%;
   margin: 0 auto;
