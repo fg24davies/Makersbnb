@@ -7,6 +7,7 @@ feature 'User can create a new listing' do
     fill_in("price", with: "30") 
     fill_in("description", with: "My room whilst Im at my parents house")
     # Change username field to use session ID instead, when login is working
+    # Need to have user added before making listing - make sure exists.
     fill_in("username", with: "alec_1")
     click_button("Submit Listing")
     expect(page).to have_content "Alecs Room: £30"

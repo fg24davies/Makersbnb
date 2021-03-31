@@ -10,6 +10,3 @@ describe Listing do
     end
   end
 end
-# 'Spare Room',	'sofa bed in living area',	'10',	'1');")
-# 'Master Bedroom',	'ensuite available',	'999',	'1');")
-# 'Room of Alec',	'my room while i stay at my parents',	'30',	'4');")

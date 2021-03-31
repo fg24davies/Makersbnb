@@ -3,7 +3,7 @@ feature 'Log in' do
   scenario 'A registered user logs in, they are greeted' do
     sign_up(name: 'Taran', username: 'taran_23', email: 'taranisawesome@makers.com', password: 'password123')
     log_in(username: 'taran_23', password: 'password123')
-    expect(page).to have_content("Welcome back taran_23")
+    expect(page).to have_content("taran_23")
   end
   
   scenario 'After a user logs in, the login form is not there' do

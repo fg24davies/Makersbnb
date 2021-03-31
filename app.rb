@@ -25,6 +25,11 @@ class Apebnb < Sinatra::Base
     erb(:login)
   end
 
+  post '/logout' do
+    session.delete(:username)
+    redirect '/'
+  end
+
   post '/user/new' do
     if User.find_username?(username: params[:username])
       flash[:username_in_use] = 'Username already in use; choose a different username or log-in'
