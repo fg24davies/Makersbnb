@@ -1,4 +1,4 @@
-
+require 'bcrypt'
 require_relative 'database_connection'
 
 class User
@@ -7,8 +7,12 @@ class User
   end
 
   def self.authenticate?(password:, username:)
-    data = DatabaseConnection.query("SELECT username, password FROM users WHERE username = '#{username}' AND password = '#{password}';")
-    data.ntuples.positive?
+    data = DatabaseConnection.query("SELECT username, password FROM users WHERE username = '#{username}';")
+    if data.ntuples.positive?
+      BCrypt::Password.new(data[0]['password']) == password
+    else
+      false
+    end 
   end
 
   def self.find_username?(username:)
@@ -22,7 +26,7 @@ class User
   end
 
   def self.add(name:, username:, email:, password:)
-    DatabaseConnection.query("INSERT INTO users (name, username, email, password) VALUES ('#{name}', '#{username}', '#{email}', '#{password}');")
+    encrypted_password = BCrypt::Password.create(password)
+    data = DatabaseConnection.query("INSERT INTO users (name, username, email, password) VALUES ('#{name}', '#{username}', '#{email}', '#{encrypted_password}');")
   end
 end
-
