@@ -21,7 +21,7 @@
 <body>
   <%# If logged in %>
     <% if session[:username] %>
-      <h2> Welcome back <%= session[:username] %>
+      <h2> <%= session[:username] %>
     </h2>
       <%# If not logged in %>
         <% else %>
