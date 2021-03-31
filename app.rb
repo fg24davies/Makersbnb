@@ -36,8 +36,13 @@ class Apebnb < Sinatra::Base
 
   post '/add-listing' do
     Listing.add(title: params[:title], price: params[:price], 
-      description: params[:description], id: User.find_id(username: session[:username]))
+      description: params[:description], host_id: User.find_id(username: session[:username]))
     redirect '/listings'
+  end
+
+  get '/listing/:id' do
+    @listing = Listing.find(id: params['id'])
+    erb(:view_listing)
   end
 
   post '/user/new' do

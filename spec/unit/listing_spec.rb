@@ -11,7 +11,7 @@ describe Listing do
   end
   describe '.add' do
     it 'adds a new listing to the database and returns a Listing object' do
-      listing = Listing.add(title: 'room', price: '20', description: 'swanky', id: '1')
+      listing = Listing.add(title: 'room', price: '20', description: 'swanky', host_id: '1')
       expect(listing).to be_a(Listing)
       expect(listing.title).to eq "room"
       expect(listing.price).to eq "20"

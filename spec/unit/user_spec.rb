@@ -29,7 +29,6 @@ describe User do
   end
 
   describe '.add' do
-
     it 'saves user data to database' do
       User.add(name: 'Alec', username: 'alecrox', email: 'alecrox@yoursox.com', password: 'orangytangies')
       expect(User.authenticate?(password: 'orangytangies', username: 'alecrox')).to eq(true)
