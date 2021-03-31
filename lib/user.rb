@@ -16,6 +16,11 @@ class User
     data.ntuples.positive?
   end
 
+  def self.find_email?(email:)
+    data = DatabaseConnection.query("SELECT username FROM users WHERE email = '#{email}';")
+    data.ntuples.positive?
+  end
+
   def self.add(name:, username:, email:, password:)
     DatabaseConnection.query("INSERT INTO users (name, username, email, password) VALUES ('#{name}', '#{username}', '#{email}', '#{password}');")
   end

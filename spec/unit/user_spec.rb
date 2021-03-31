@@ -15,6 +15,13 @@ describe User do
     end
   end
 
+  describe '.find_email?' do
+    it 'checks if email is in database' do 
+      expect(User.find_email?(email: 'taran@bnb.com')).to eq true
+      expect(User.find_email?(email: 'taranimpostor@bnb.com')).to eq false
+    end
+  end
+
   describe '.add' do
     it 'saves user data to database' do
       expect(DatabaseConnection).to receive(:query).with("INSERT INTO users (name, username, email, password) VALUES ('Alec', 'alecrox', 'alecrox@yoursox.com', 'orangerangytangies');").and_call_original

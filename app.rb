@@ -23,6 +23,13 @@ class Apebnb < Sinatra::Base
   end
 
   post '/user/new' do
+    if User.find_username?(username: params[:username])
+      flash[:username_in_use] = 'Username already in use; choose a different username or log-in'
+      redirect '/sign_up'
+    elsif User.find_email?(email: params[:email])
+      flash[:email_in_use] = 'E-mail already in use; choose a different e-mail or log-in'
+      redirect '/sign_up'
+    end
     User.add(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     redirect '/user/welcome'
   end
