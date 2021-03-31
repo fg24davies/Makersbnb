@@ -20,20 +20,24 @@
           1,
           null,
           1,
-          13,
-          null,
-          null,
-          1,
-          3,
+          11,
           null,
           null,
           1,
           2,
-          2,
           null,
           null,
           1,
-          2,
+          7,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
           null,
           null,
           1,
@@ -44,11 +48,12 @@
           4,
           2,
           2,
+          2,
           1,
           null,
           1,
           null,
-          4,
+          2,
           null,
           null
         ]
@@ -93,7 +98,7 @@
           null,
           null,
           1,
-          192,
+          191,
           null,
           null
         ]
@@ -119,7 +124,7 @@
           null,
           null,
           1,
-          3,
+          2,
           null,
           null,
           null
@@ -157,6 +162,17 @@
           4,
           4,
           4,
+          4,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null
         ]
       },
@@ -164,6 +180,12 @@
         "lines": [
           1,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           1,
           1,
@@ -227,26 +249,12 @@
       "/Users/alec/Projects/makers-course/afternoon-challenges/Makersbnb/spec/features/signing_up_spec.rb": {
         "lines": [
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
           null,
           1,
           1,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
           null,
           null
         ]
@@ -345,6 +353,6 @@
         ]
       }
     },
-    "timestamp": 1617117900
+    "timestamp": 1617201046
   }
 }

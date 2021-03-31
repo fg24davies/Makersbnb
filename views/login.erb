@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+</head>
+<body>
+  <h3>
+    <%=flash[:invalid_username]%>
+  </h3>
+  <h3>
+    <%=flash[:invalid_password]%>
+  </h3>
+
+    <form action="/sessions" method="post">
+      <input type="text" name="username" placeholder="username" />
+      <input type="password" name="password" placeholder="password" />
+      <button type="submit" name="Log in">Log in</button>
+    </form>
+</body>
+</html>
