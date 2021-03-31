@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/drop-in.css">
+  <link rel="stylesheet" href="/css/homepage.css">
+
   <title>ApeBnB</title>
 </head>
+
 <body>
-  <h1>Welcome to ApeBnB!</h1>
-  <h3><%=flash[:invalid_username]%></h3>
-  <h3><%=flash[:invalid_password]%></h3>
-  <%# If logged in  %>
   <% if session[:username] %>
-    <h2> Welcome back <%= session[:username] %> </h2>
-  <%# If not logged in  %>
+    <nav class="navbar">
+      <h1 id="logo">ApeBnB<h1>
+      <div id="username">
+      <p><%= session[:username] %></p>
+      </div>
+      <form action='/logout' method='post'>
+        <button type="submit" name="logout" class="button">Log out</button>
+      </form>
+    </nav>
   <% else %>
-    <form action="/sessions" method="post">
-      <input type="text" name="username" placeholder="username" />
-      <input type="password" name="password" placeholder="password" />
-      <button type="submit" name="Log in">Log in</button>
-    </form>
-  <% end %>
+          <nav class="navbar">
+            <h1 id="logo">ApeBnB</h1>
+            <div id="user_links">
+            <ul>
+              <li> <a href="/sign_up" id="Sign-up">Sign Up</a></li>
+              <li> <a href="/login" id="Login">Login</a></li>
+            </ul>
+            </div>
+          </nav>
+   <% end %>
 
-  <form action="/sign_up" method="get">
-  <button type="submit" name="Sign-up">Sign-up</button>
-  </form>
+            <div class="hero">
+              <img src="/images/ape-hero.png" alt="orangytangy">
+            </div>
 
-  <form action='/listings' method='get'>
-    <button type="submit" name="View Listings">View Listings</button>
-  </form>
+            <form action='/listings' method='get'>
+              <button type="submit" name="View Listings" class="button">View Listings</button>
+            </form>
 </body>
+
 </html>

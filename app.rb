@@ -21,6 +21,10 @@ class Apebnb < Sinatra::Base
     erb(:sign_up)
   end
 
+  get '/login' do
+    erb(:login)
+  end
+
   post '/user/new' do
     if User.find_username?(username: params[:username])
       flash[:username_in_use] = 'Username already in use; choose a different username or log-in'
@@ -45,11 +49,12 @@ class Apebnb < Sinatra::Base
   post '/sessions' do
     if User.authenticate?(password: params[:password], username: params[:username])
       session[:username] = params[:username]
+      redirect '/'
     elsif User.find_username?(username: params[:username])
       flash[:invalid_password] = "Incorrect password! Try again" 
     else 
       flash[:invalid_username] = "Username not found! Try again or Sign Up"
     end
-    redirect '/'
+    redirect '/login'
   end     
 end 

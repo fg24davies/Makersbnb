@@ -7,7 +7,7 @@ end
 
 def sign_up(name:, username:, email:, password:)
   visit '/'
-  click_button("Sign-up")
+  click_button("Sign Up")
   fill_in('name', with: name)
   fill_in('username', with: username)
   fill_in('email', with: email)
