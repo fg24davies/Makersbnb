@@ -1,0 +1,419 @@
+/*
+ * General/Utility Styles
+*/
+
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+body {
+  margin: 0;
+  background: rgb(245, 245, 245);
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 0.875rem;
+  color: rgb(86, 90, 92);
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  font-weight: bold;
+  color: rgb(255, 89, 95);
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/*
+ * header styles
+*/
+
+h1 {
+  font-size: 1.375rem;
+}
+
+/*
+ * navbar styles
+*/
+
+.header {
+  background: white;
+}
+
+.header img {
+  border-right: 1px solid #DCE0E0;
+}
+
+/*
+ * hero styles
+*/
+
+.hero img {
+  width: 100%;
+}
+
+/*
+ * info styles
+*/
+
+.info {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #DCE0E0;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.owner-details img {
+  border-radius: 50%;
+  margin-bottom: 0.3125rem;
+}
+
+.owner-details {
+  color: #909597;
+}
+
+.owner-details .name {
+  font-weight: bold;
+  margin-bottom: 0.3125rem;
+}
+
+.pet-details .location {
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.info .icon {
+  float: left;
+  width: 33.3%;
+}
+
+.info .icon img {
+  height: 36px;
+}
+
+.pet-details {
+  color: #666A6C;
+  margin-bottom: 1.25rem;
+}
+
+/*
+ * booking styles
+*/
+
+.info .booking h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+}
+
+.booking span {
+  font-size: 1.15rem;
+}
+
+/*
+ * Button styles
+*/
+
+.button {
+  background: rgb(255, 89, 95);
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.75rem 5rem;
+  border-bottom: 1px solid rgb(227, 25, 29);
+  border-radius: 2px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/*
+ * about styles
+*/
+
+.about {
+    text-align: center;
+}
+
+.about h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 28px;
+  margin-top: 1rem;
+}
+
+.about p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  color: #565a5c;
+  text-align: left;
+}
+
+.about a {
+  font-size: 0.8125rem;
+  padding: 36px;
+  display: block;
+}
+
+/*
+ * care styles
+*/
+
+.care {
+  padding: 1.75rem 0 1.75rem 0;
+  margin: 0 28px 0 28px;
+  border-top: 1px solid #DCE0E0;
+  border-bottom: 1px solid #DCE0E0;
+  line-height: 1.1rem;
+}
+
+.care .bold {
+  display: inline;
+  font-weight: bold;
+}
+
+.care time {
+  font-weight: bold;
+}
+
+/*
+ * games styles
+*/
+
+.games {
+  padding: 1.75rem 0 1.75rem 0;
+  margin: 0 28px 0 28px;
+  border-bottom: 1px solid #DCE0E0;
+  line-height: 1.1rem;
+}
+
+.games .icon {
+  padding-bottom: 0.3125rem;
+  margin-top: 0;
+}
+
+.games .icon h2 {
+  display: inline;
+}
+
+.games .icon img {
+  height: 20px;
+  width: 20px;
+}
+
+/*
+ * pics styles
+*/
+
+
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create three equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 33.3%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  width: 60%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 45%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 25%;
+}
+
+.prev {
+  left: 25%;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: silver;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*
+ * desktop styles
+*/
+
+@media only screen and (min-width: 1060px) {
+
+.column {
+  float: left;
+}
+
+.container {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.profile {
+  width: 660px;
+  border-right: 1px solid #DCE0E0;
+}
+
+.profile .owner-details {
+  width: 20%;
+}
+
+.profile .pet-details {
+  width: 80%;
+  text-align: left;
+}
+
+.profile h1, .profile .location {
+  line-height: 30px;
+}
+
+.info .pet-details .icon img {
+  padding-left: 12%;
+}
+
+.booking {
+  width: 380px;
+  padding: 0.625rem 0 4.188rem 60px;
+}
+
+.infloat {
+  float: left;
+}
+
+.about a, .care, .games {
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.games .games-float {
+  float: left;
+}
+
+.games h3 {
+  margin: 0 5rem 1rem 0; 
+}
+
+.container2 {
+  width: 655px;
+  margin: 0 0 1.25rem 10%;
+}
+
+.pics img {
+  max-width: 200px;
+}
+
+.pics {
+  padding: 10px;
+  }
+}
