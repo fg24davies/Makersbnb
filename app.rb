@@ -30,6 +30,16 @@ class Apebnb < Sinatra::Base
     redirect '/'
   end
 
+  get '/listing/new' do
+    erb(:new_listing)
+  end
+
+  post '/add-listing' do
+    Listing.add(title: params[:title], price: params[:price], 
+      description: params[:description], id: User.find_id(username: session[:username]))
+    redirect '/listings'
+  end
+
   post '/user/new' do
     if User.find_username?(username: params[:username])
       flash[:username_in_use] = 'Username already in use; choose a different username or log-in'
