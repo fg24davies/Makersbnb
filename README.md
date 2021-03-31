@@ -28,12 +28,12 @@ Our MVP will include the following functionality:
 - [x] See a list of spaces
 - [x] Username and email are unique
 - [x] User is welcomed after signing up
-- [] Encryping password
-- [] CSS
-- [] Logout
-- [] List a space as a user
-- [] Listing page includes information about listings and to request a booking
-- [] Sort out the README
+- [ ] Encryping password
+- [ ] CSS
+- [ ] Logout
+- [ ] List a space as a user
+- [ ] Listing page includes information about listings and to request a booking
+- [ ] Sort out the README
 
 Post MVP:
 
