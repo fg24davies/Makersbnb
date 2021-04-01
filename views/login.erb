@@ -4,20 +4,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/drop-in.css">
+  <link rel="stylesheet" href="/css/login.css">
+
   <title>Login Page</title>
 </head>
 <body>
+    <header>
+    <div class="logo">
+      <h1>ApeBnB</h1>
+    </div>
+    </header>
   <h3>
     <%=flash[:invalid_username]%>
   </h3>
   <h3>
     <%=flash[:invalid_password]%>
   </h3>
-
+  <div class="container">
+  <h1> Welcome back, friend </h1>
     <form action="/sessions" method="post">
       <input type="text" name="username" placeholder="username" />
       <input type="password" name="password" placeholder="password" />
-      <button type="submit" name="Log in">Log in</button>
+      <button class="button" type="submit" name="Log in">Log in</button>
     </form>
+    <p>Don't have an account? <a href="/sign_up">Sign up here!</a></p>
+    </div>
 </body>
 </html>

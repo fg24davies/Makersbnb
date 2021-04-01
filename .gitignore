@@ -5,6 +5,5 @@
 .rubocop.yml
 
 # Ignore coverage
-.coverage
+coverage/**
 
-coverage/.resultset.json
