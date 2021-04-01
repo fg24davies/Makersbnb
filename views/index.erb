@@ -71,8 +71,7 @@
         <ul>
           <% Listing.all.each do |listing| %>
             <li class='listing' id="listing-<%= listing.id %>">
-              <img src="../images/treemonk.jpg">
-              <div class="text">
+            <img src=<%=Image.random_image%> alt='treehouse'>              <div class="text">
               <p><b><%=listing.title%></b>: £<%=listing.price%><br>
               <%=listing.description%></p>
               <form action='listing/<%=listing.id%>' method='get'>
