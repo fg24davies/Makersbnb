@@ -9,12 +9,11 @@
 <body>
   <h1><%=@listing.title%></h1>
   <h2>Price: £<%=@listing.price%> </h2>
-  <h3>Description of listing:<%=@listing.description%> </h3>
-  <%# <form action='/add-listing' method='post'> %>
-
-
-    <input type='submit' value='Book'>
-  <%# </form> %>
+  <h3>Description of listing: <%=@listing.description%> </h3>
+  <form action='/booking' method='post'>
+    <label for='date'>Choose date: <input type='date' name='date' id='date'>
+    <input type='submit' value='Request to book'>
+  </form>
 
   <a href='/'>Homepage</a>
   <a href='/listings'>Listings</a>

@@ -13,10 +13,13 @@
       <li class='listing' id="listing-<%= listing.id %>">
         <%=listing.title%>: £<%=listing.price%><br><%=listing.description%>
         <form action='listing/<%=listing.id%>' method='get'>
-          <input type='submit' value='View'>
+          <input type='submit' value='View' name='<%=listing.title%>'>
         </form>
-      <li>
+      </li>
     <% end %>
   </ul>
+  <% if session[:date] %>
+    <%=flash[:booking]%>
+  <% end %>
 </body>
 </html>
