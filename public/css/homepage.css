@@ -52,6 +52,17 @@
 }
 
 /*
+ * flash styles
+*/
+
+.flash {
+  text-align: center;
+  font-size: large;
+  font-weight: 500;
+  padding-top: 15px;
+}
+
+/*
  * link styles
 */
 
@@ -72,6 +83,10 @@ button:active {
   border: none;
 }
 
+/* 
+ * listing styles
+ */
+
 .listing-container {
   display: block;
   margin: auto;
@@ -86,7 +101,29 @@ button:active {
 }
 
 .listing-container img {
-  display: block;
-  max-width: 50%;
+  float: left;
+  height: 200px;
+  width: 300px;
   height: auto;
+  text-align: right;
+}
+
+.listing-container li {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+div.text {
+  float: left;
+  padding: 15px;
+}
+
+div.text p {
+  line-height: 30px;
+}
+
+b {
+  font-weight: bolder;
 }
