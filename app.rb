@@ -76,5 +76,10 @@ class Apebnb < Sinatra::Base
       flash[:invalid_username] = "Username not found! Try again or Sign Up"
     end
     redirect '/login'
-  end     
+  end
+
+  post '/booking' do
+    @listing = Listing.find(id: params['id'])
+    redirect '/listing/:id'
+  end
 end 

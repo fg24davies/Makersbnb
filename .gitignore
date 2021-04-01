@@ -6,3 +6,5 @@
 
 # Ignore coverage
 .coverage
+
+coverage/.resultset.json
