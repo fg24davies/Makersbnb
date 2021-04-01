@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New listing</title>
+</head>
+<body>
+  <h1><%=@listing.title%></h1>
+  <h2>Price: £<%=@listing.price%> </h2>
+  <h3>Description of listing:<%=@listing.description%> </h3>
+  <%# <form action='/add-listing' method='post'> %>
+
+
+    <input type='submit' value='Book'>
+  <%# </form> %>
+
+  <a href='/'>Homepage</a>
+  <a href='/listings'>Listings</a>
+</body>
+</html>

@@ -1,13 +1,13 @@
-feature 'User can create a new listing' do
-  xscenario 'A user can list their room' do
+feature 'Users can create new listings' do
+  scenario 'A signed in user can list their room' do
     visit('/')
-    click_button("View Listings")
+    log_in(username: 'taran_1', password:'password123')
     click_button("Post Listing")
-    expect(current_path).to eq '/listings/new'
-    expect(page).to have_field "title"
-    expect(page).to have_field "price"
-    expect(page).to have_field "description"
-    # Needs a logged in user!!!
-    find_button("Submit Listing").click
+    expect(current_path).to eq '/listing/new'
+    fill_in("title", with: "Alecs Room")
+    fill_in("price", with: "30") 
+    fill_in("description", with: "My room whilst Im at my parents house")
+    click_button("Submit Listing")
+    expect(page).to have_content "Alecs Room: £30"
   end
 end

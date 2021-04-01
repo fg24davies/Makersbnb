@@ -20,6 +20,8 @@
       <div class="container">
   <h1 class="greeting"> Give a monkeys, <br>
   anytime, anywhere </h1>
+  <%= flash[:username_in_use] %>
+  <%= flash[:email_in_use] %>
   <form action='/user/new' method='post'>
     <input type="text" name="name" id="name" placeholder="Name" required>
     <input type="text" name="username" id="username" placeholder="Username" required>

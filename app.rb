@@ -2,7 +2,6 @@ require 'sinatra/base'
 require 'sinatra/flash'
 require 'sinatra/reloader'
 require './database_setup'
-require './lib/user'
 require './lib/listing'
 require './lib/user'
 
@@ -26,10 +25,37 @@ class Apebnb < Sinatra::Base
     erb(:login)
   end
 
+  post '/logout' do
+    session.delete(:username)
+    redirect '/'
+  end
+
+  get '/listing/new' do
+    erb(:new_listing)
+  end
+
+  post '/add-listing' do
+    Listing.add(title: params[:title], price: params[:price], 
+      description: params[:description], host_id: User.find_id(username: session[:username]))
+    redirect '/listings'
+  end
+
+  get '/listing/:id' do
+    @listing = Listing.find(id: params['id'])
+    erb(:view_listing)
+  end
+
   post '/user/new' do
-    p params[:password]
+    if User.find_username?(username: params[:username])
+      flash[:username_in_use] = 'Username already in use; choose a different username or log-in'
+      redirect '/sign_up'
+    elsif User.find_email?(email: params[:email])
+      flash[:email_in_use] = 'E-mail already in use; choose a different e-mail or log-in'
+      redirect '/sign_up'
+    end
     User.add(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
-    redirect '/user/welcome'
+    session[:name] = params[:name]
+    redirect '/'
   end
 
   get '/user/welcome' do

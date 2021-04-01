@@ -7,8 +7,9 @@
   <title>Welcome</title>
 </head>
 <body>
-  <h1>Welcome to the ApeBnB family!</h1>
-
+  <% if session[:name] %>
+  <h1>Welcome to the ApeBnB family, <%=session.delete(:name)%>!</h1>
+  <% end %>
   <a href='/'>Homepage</a>
   <a href='/listings'>Listings</a>
 </body>
