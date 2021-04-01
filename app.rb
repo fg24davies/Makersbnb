@@ -35,9 +35,9 @@ class Apebnb < Sinatra::Base
   end
 
   post '/add-listing' do
-    Listing.add(title: params[:title], price: params[:price], 
-      description: params[:description], host_id: User.find_id(username: session[:username]))
-    redirect '/listings'
+    Listing.add(title: params[:title], price: params[:price],
+                description: params[:description], host_id: User.find_id(username: session[:username]))
+    redirect '/'
   end
 
   get '/listing/:id' do
@@ -59,22 +59,14 @@ class Apebnb < Sinatra::Base
     redirect '/'
   end
 
-  get '/user/welcome' do
-    erb(:welcome)
-  end
-
-  get '/listings' do
-    erb(:listings)
-  end
-
   post '/sessions' do
     if User.authenticate?(password: params[:password], username: params[:username])
       session[:username] = params[:username]
       redirect '/'
     elsif User.find_username?(username: params[:username])
-      flash[:invalid_password] = "Incorrect password! Try again" 
-    else 
-      flash[:invalid_username] = "Username not found! Try again or Sign Up"
+      flash[:invalid_password] = 'Incorrect password! Try again'
+    else
+      flash[:invalid_username] = 'Username not found! Try again or Sign Up'
     end
     redirect '/login'
   end

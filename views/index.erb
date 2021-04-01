@@ -17,51 +17,66 @@
 
   <% if session[:username] %>
     <header>
-    <div class="logo">
-      <h1>ApeBnB</h1>
-    </div>
-    <nav class="navbar">
-    <ul>
-    <li>
-      <div id="username">
-      <p><%= session[:username] %></p>
+      <div class="logo">
+        <h1>ApeBnB</h1>
       </div>
-      </li>
-      <li>
-      <form action='/listing/new' method='get'>
-        <button type="submit" name="Post Listing" class="button">New listing</button>
-      </form>
-      </li>
-      <li>
-      <form action='/logout' method='post'>
-        <button type="submit" name="logout" class="button">Log out</button>
-      </form>
-      </li>
-      </ul>
-    </nav>
-    </header>
-  <% else %>
-  <header id="header">
-    <div class="logo">
-      <h1>ApeBnB</h1>
-    </div>
-
-    <nav id="nav-bar">
-      <ul>
-        <li><a class="nav-link" href="/sign_up" id="Sign-up">Sign Up</a></li>
-        <li><a class="nav-link" href="/login" id="Login">Login</a></li>
-      </ul>
-    </nav>
-  </header>
-   <% end %>
-
-            <div class="hero">
-              <img src="/images/ape-hero.png" alt="orangytangy">
+      <nav class="navbar">
+        <ul>
+          <li>
+            <div id="username">
+              <p>
+                <%= session[:username] %>
+              </p>
             </div>
-
-            <form action='/listings' method='get'>
-              <button type="submit" name="View Listings" class="button">View Listings</button>
+          </li>
+          <li>
+            <form action='/listing/new' method='get'>
+              <button type="submit" name="Post Listing" class="button">New listing</button>
             </form>
+          </li>
+          <li>
+            <form action='/logout' method='post'>
+              <button type="submit" name="logout" class="button">Log out</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <% else %>
+      <header id="header">
+        <div class="logo">
+          <h1>ApeBnB</h1>
+        </div>
+
+        <nav id="nav-bar">
+          <ul>
+            <li><a class="nav-link" href="/sign_up" id="Sign-up">Sign Up</a></li>
+            <li><a class="nav-link" href="/login" id="Login">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+      <% end %>
+
+        <div class="hero">
+          <img src="/images/ape-hero.png" alt="orangytangy">
+        </div>
+        <% if session[:name] %>
+          <h1>Welcome to the ApeBnB family, <%=session.delete(:name)%>!</h1>
+        <% end %>
+        <div class="listing-container">
+        <h1>Available listings</h1>
+        <ul>
+          <% Listing.all.each do |listing| %>
+            <li class='listing' id="listing-<%= listing.id %>">
+              <%=listing.title%>: £<%=listing.price%><br><%=listing.description%>
+              <form action='listing/<%=listing.id%>' method='get'>
+                <input type='submit' value='View'>
+              </form>
+              <img src="../images/treemonk.jpg">
+            <li>
+          <% end %>
+        </ul>
+        </div>
 </body>
 
 </html>

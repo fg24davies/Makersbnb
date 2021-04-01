@@ -1,10 +1,9 @@
 require 'user'
 
-describe User do 
-
+describe User do
   describe '.authenticate?' do
     it 'checks username and password are correct' do
-      expect(User.authenticate?(password: 'password123',username: 'taran_1')).to eq true
+      expect(User.authenticate?(password: 'password123', username: 'taran_1')).to eq true
     end
   end
 
@@ -24,7 +23,7 @@ describe User do
 
   describe '.find_id' do
     it 'returns the users id, given their username' do
-      expect(User.find_id(username: "taran_1")).to eq('1')
+      expect(User.find_id(username: 'taran_1')).to eq('1')
     end
   end
 
