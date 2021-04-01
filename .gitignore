@@ -5,4 +5,4 @@
 .rubocop.yml
 
 # Ignore coverage
-.coverage
+/coverage

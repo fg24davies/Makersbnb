@@ -27,6 +27,7 @@ class Apebnb < Sinatra::Base
   end
 
   post '/user/new' do
+    p params[:password]
     User.add(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     redirect '/user/welcome'
   end

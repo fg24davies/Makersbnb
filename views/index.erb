@@ -14,26 +14,40 @@
 </head>
 
 <body>
+
   <% if session[:username] %>
+    <header>
+    <div class="logo">
+      <h1>ApeBnB</h1>
+    </div>
     <nav class="navbar">
-      <h1 id="logo">ApeBnB<h1>
+    <ul>
+    <li>
       <div id="username">
       <p><%= session[:username] %></p>
       </div>
+      </li>
+      <li>
       <form action='/logout' method='post'>
         <button type="submit" name="logout" class="button">Log out</button>
       </form>
+      </li>
+      </ul>
     </nav>
+    </header>
   <% else %>
-          <nav class="navbar">
-            <h1 id="logo">ApeBnB</h1>
-            <div id="user_links">
-            <ul>
-              <li> <a href="/sign_up" id="Sign-up">Sign Up</a></li>
-              <li> <a href="/login" id="Login">Login</a></li>
-            </ul>
-            </div>
-          </nav>
+  <header id="header">
+    <div class="logo">
+      <h1>ApeBnB</h1>
+    </div>
+
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link" href="/sign_up" id="Sign-up">Sign Up</a></li>
+        <li><a class="nav-link" href="/login" id="Login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
    <% end %>
 
             <div class="hero">
