@@ -1,6 +1,5 @@
-feature "Signing up" do
-  
-  scenario "Submitting form redirects to welcome message" do
+feature 'Signing up' do
+  scenario 'Submitting form redirects to welcome message' do
     sign_up(name: 'Alec', username: 'alecrox', email: 'alecrox@yoursox.com', password: 'alec123')
     expect(page).to have_content('Welcome to the ApeBnB family, Alec!')
     expect(current_path).to eq '/'
