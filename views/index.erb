@@ -63,17 +63,23 @@
         <% if session[:name] %>
           <h1>Welcome to the ApeBnB family, <%=session.delete(:name)%>!</h1>
         <% end %>
+
+        <h2 class="flash"><%=flash[:booking]%></h2>
+
         <div class="listing-container">
         <h1>Available listings</h1>
         <ul>
           <% Listing.all.each do |listing| %>
             <li class='listing' id="listing-<%= listing.id %>">
-              <%=listing.title%>: £<%=listing.price%><br><%=listing.description%>
+              <img src="../images/treemonk.jpg">
+              <div class="text">
+              <p><b><%=listing.title%></b>: £<%=listing.price%><br>
+              <%=listing.description%></p>
               <form action='listing/<%=listing.id%>' method='get'>
                 <input type='submit' value='View'>
               </form>
-              <img src=<%=Image.random_image%> alt='treehouse'>
-            <li>
+              </div>
+            </li>
           <% end %>
         </ul>
         </div>

@@ -75,6 +75,6 @@ class Apebnb < Sinatra::Base
   post '/booking' do
     session[:date] = params['date']
     flash[:booking] = "Thank you! Your booking request for #{session[:listing].title} on #{params['date']} has been sent."
-    redirect '/listings'
+    redirect '/'
   end
 end 
