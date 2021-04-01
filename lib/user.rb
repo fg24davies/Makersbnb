@@ -29,4 +29,9 @@ class User
     encrypted_password = BCrypt::Password.create(password)
     data = DatabaseConnection.query("INSERT INTO users (name, username, email, password) VALUES ('#{name}', '#{username}', '#{email}', '#{encrypted_password}');")
   end
+
+  def self.find_id(username:)
+    data = DatabaseConnection.query("SELECT id FROM users WHERE username = '#{username}';")
+    data[0]['id']
+  end
 end
