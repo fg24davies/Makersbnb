@@ -4,17 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/drop-in.css">
+  <link rel="stylesheet" href="/css/sign-up.css">
+
   <title>Sign-Up</title>
 </head>
 <body>
+    <header>
+    <div class="logo">
+      <h1>ApeBnB</h1>
+    </div>
+    </header>
+      <div class="container">
+  <h1 class="greeting"> Give a monkeys, <br>
+  anytime, anywhere </h1>
   <%= flash[:username_in_use] %>
   <%= flash[:email_in_use] %>
   <form action='/user/new' method='post'>
-    <label for="name">Name:</label><input type="text" name="name" id="name" required>
-    <label for="username">Username:</label><input type="text" name="username" id="username" required>
-    <label for="email">E-mail:</label><input type="email" name="email" id="email" required>
-    <label for="password">Password:</label><input type="password" name="password" id="password" required>
-    <button type="submit" value="Submit">Submit</button>
+    <input type="text" name="name" id="name" placeholder="Name" required>
+    <input type="text" name="username" id="username" placeholder="Username" required>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+    <input type="password" name="password" id="password" placeholder="Password" required>
+    <button type="submit" value="Submit" class="button">Submit</button>
   </form>
+  </div>
 </body>
 </html>

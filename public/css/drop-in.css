@@ -56,7 +56,7 @@ table {
 html { font-family: 'Open Sans', sans-serif; }
 
 h1, h2, h3, h4 {
-  font-family: 'Bangers', sans-serif;
+  font-family: 'Open Sans', arial, sans-serif;
 }
 
 /* Colors */
@@ -75,14 +75,14 @@ body {
 }
 
 main {
-  background-color: rgb(245, 245, 245);ddd;   /* light gray */
+  background-color: rgb(245, 245, 245);   /* light gray */
   color: rgb(86, 90, 92);              /* dark gray */
 }
 
 a:link,
 a:visited,
 header nav input[type="submit"] {
-  color: #c00;           /* darker contrasting color; inactive links */
+  color: rgb(86, 90, 92);;           /* darker contrasting color; inactive links */
   font-weight: bold;
   text-decoration: none;
 }
@@ -91,11 +91,11 @@ a:hover,
 a:active,
 header nav input[type="submit"]:hover,
 header nav input[type="submit"]:active {
-  color: #f22;          /* brighter contrasting color; active links */
+  color: rgb(86, 90, 92);;          /* brighter contrasting color; active links */
 }
 
 header nav li {
-  border-left: 3px solid #888;    /* match html background-color */
+  border-left: 3px solid white;    /* match html background-color */
 }
 
 main table,

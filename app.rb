@@ -55,7 +55,7 @@ class Apebnb < Sinatra::Base
     end
     User.add(name: params[:name], username: params[:username], email: params[:email], password: params[:password])
     session[:name] = params[:name]
-    redirect '/user/welcome'
+    redirect '/'
   end
 
   get '/user/welcome' do
