@@ -63,6 +63,7 @@
         <% if session[:name] %>
           <h1>Welcome to the ApeBnB family, <%=session.delete(:name)%>!</h1>
         <% end %>
+        <div class="listing-container">
         <h1>Available listings</h1>
         <ul>
           <% Listing.all.each do |listing| %>
@@ -71,9 +72,11 @@
               <form action='listing/<%=listing.id%>' method='get'>
                 <input type='submit' value='View'>
               </form>
+              <img src="../images/treemonk.jpg">
             <li>
           <% end %>
         </ul>
+        </div>
 </body>
 
 </html>

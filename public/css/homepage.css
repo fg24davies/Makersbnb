@@ -71,3 +71,22 @@ button:active {
   color: rgb(255, 89, 95);
   border: none;
 }
+
+.listing-container {
+  display: block;
+  margin: auto;
+  max-width: 70%;
+}
+
+.listing-container h1 {
+  text-align: center;
+  font-size: x-large;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.listing-container img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+}
