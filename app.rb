@@ -42,6 +42,7 @@ class Apebnb < Sinatra::Base
 
   get '/listing/:id' do
     @listing = Listing.find(id: params['id'])
+    session[:listing] = @listing
     erb(:view_listing)
   end
 
@@ -79,7 +80,8 @@ class Apebnb < Sinatra::Base
   end
 
   post '/booking' do
-    @listing = Listing.find(id: params['id'])
-    redirect '/listing/:id'
+    session[:date] = params['date']
+    flash[:booking] = "Thank you! Your booking request for #{session[:listing].title} on #{params['date']} has been sent."
+    redirect '/listings'
   end
 end 

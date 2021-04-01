@@ -18,5 +18,8 @@
       </li>
     <% end %>
   </ul>
+  <% if session[:date] %>
+    <%=flash[:booking]%>
+  <% end %>
 </body>
 </html>
