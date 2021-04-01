@@ -4,6 +4,7 @@ require 'sinatra/reloader'
 require './database_setup'
 require './lib/listing'
 require './lib/user'
+require './lib/image'
 
 class Apebnb < Sinatra::Base
   configure :development do
