@@ -58,10 +58,6 @@ class Apebnb < Sinatra::Base
     redirect '/'
   end
 
-  get '/user/welcome' do
-    erb(:welcome)
-  end
-
   get '/listings' do
     erb(:listings)
   end

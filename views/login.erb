@@ -17,14 +17,14 @@
       <h1>ApeBnB</h1>
     </div>
     </header>
-  <h3>
+  <div class="container">
+  <h1> Welcome back, friend </h1>
+    <h3>
     <%=flash[:invalid_username]%>
   </h3>
   <h3>
     <%=flash[:invalid_password]%>
   </h3>
-  <div class="container">
-  <h1> Welcome back, friend </h1>
     <form action="/sessions" method="post">
       <input type="text" name="username" placeholder="username" />
       <input type="password" name="password" placeholder="password" />
